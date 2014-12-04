@@ -6,12 +6,22 @@ session_start();
 
 <?php
 
-// Now Let us write the Form Validation Part for the Registration Form 
+// The Cache Control Management , Set the Expires field to ensure cache destroys moment it is created
+
 header('Cache-Control: no-store, no-cache, must-revalidate');
 header('Cache-Control: post-check=0, pre-check=0', FALSE);
 header('Pragma: no-cache');
 header('Expires: 0');
 
+// Declare the variable $action used for the GET/POST simultaneous request.
+
+function validate ($data) {
+    $data = trim($data);
+    $data = stripcslashes($data);
+    $data = htmlspecialchars($data);
+}
+
+$action = validate($_POST['action']); // Set a switch case construct for the action variable
 
 
 ?>
@@ -83,9 +93,9 @@ header('Expires: 0');
                             <h2 id="startdate"><small>Join us for the next session on January</small><span class="red">10th</span><small>, 2015</small></h1>
                             <nav class="register" id="register-menu">
                                 <div class="register-wrap">
-                                    <a href="rules.html">How to </a>
-                                    <a href="onl.html">Online </a>
-                                    <a href="off.html">Offline</a>
+                                    <a href="#">How to </a>
+                                    <a href="index.php">Online </a>
+                                    <a href="#">Offline</a>
                                 </div>
                                 <div id="registerToggle"><button class="btn btn-ted">Register</button></div>
                             </nav>
@@ -95,6 +105,48 @@ header('Expires: 0');
             </div>
         </div> 
 
+    <?php 
+        // check if the variable is set to register 
+    switch ($action) 
+    {
+        case 'contact':
+
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+    ?>
+   
+        <div class="container" id="services" name="services">
+            <br>
+            <br>
+            <div class="row">
+                <h2 class="centered">Are you exci<span class="red">TED</span></h2>
+                <hr>
+                <br>
+                <div class="col-lg-offset-2 col-lg-8">
+                    <p><code>Sent:</code> Thanks <?php echo $_POST['name']; ?> !. We have recieved your mail.
+                    </p>
+                    <p>Thank you for co-operating with us, let us analyze at your message and we will get
+                    back to you soon. We will mail you back to <?php echo $_POST['email']; ?>.</p>
+  
+                </div>
+            </div>
+            
+            <div class="row">
+                <h2 class="centered">Have anything to say</h2>
+                <hr>
+                <br>
+            </div>
+        </div>
+
+            <?php
+        }
+            break;
+        
+        case 'register':
+
+        if ($_SERVER['REQUEST_METHOD'] == 'POST' {
+
+    ?>        
   <div class="container" id="services" name="services">
             <br>
             <br>
@@ -103,16 +155,15 @@ header('Expires: 0');
                 <hr>
                 <br>
                 <div class="col-lg-offset-2 col-lg-8">
-                <form id="response" name="response" method="get" action="index.php?name=<?php echo $_SESSION['name']; ?>" enctype="multipart/form-data">
-                    <h4>Hey <?php echo $_GET['name']; ?> you have successfully filled the registration form ,so
-                    an invitation is sent to the email address <a href="#"><?php echo $_GET['email']; ?></a> along
+
+                    <h4>Hey <?php echo $_POST['name']; ?> you have successfully filled the registration form ,so
+                    an invitation is sent to the email address <a href="#"><?php echo $_POST['email']; ?></a> along
                     with a unique code which identifies that you have completed the registration .So keep that code 
                     along with you as it is necessary for communication purpose.</h4>
 
-                    <h4><code>Note:</code> In order to complete the registration process please bring that unique 
-                    code to the team so that we can complete the payment process.
-                    </h4>
-               </form>    
+                    <h4><code>Note:</code> Don't Forget to Bring the ID card that you have mentioned in the Form with
+                    number <?php echo $_POST['id']; ?> at the time of the Event.
+                    </h4>   
   
                 </div>
             </div>
@@ -120,6 +171,50 @@ header('Expires: 0');
 
         </div>
 
+        <?php  
+            }
+            break;
+        
+        ?>
+
+       <?php 
+
+        default:
+
+            if (condition) 
+            {
+        
+        ?>
+
+          <div class="container" id="services" name="services">
+            <br>
+            <br>
+            <div class="row">
+                <h2 class="centered">Are you exci<span class="red">TED</span></h2>
+                <hr>
+                <br>
+                <div class="col-lg-offset-2 col-lg-8">
+                    <p><code>Success:</code> We have recieved your mail.
+                    </p>
+                    <p>Thank you for co-operating with us, let us analyze at your message and we will get
+                    back to you soon.</p>
+  
+                </div>
+            </div>
+            
+            <div class="row">
+                <h2 class="centered">Have anything to say</h2>
+                <hr>
+                <br>
+            </div>
+        </div>
+            
+            <?php
+         }    
+            break;
+    }
+
+        ?>
 
  
 <footer>
