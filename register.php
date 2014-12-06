@@ -1,7 +1,7 @@
 <?php
 /*
 Author : AkhilHector
-PHP : 5.6
+PHP : 5.6a
 */
 session_start();
 
@@ -38,7 +38,13 @@ $email = send($_POST['email']);
 $collorg = send($_POST['collorg']);
 $prev = send($_POST['prev']);
 $favtalk = send($_POST['favtalk']);
-$opinion = send($_POST['opinion']);
+
+
+send_admin($myemail);  // notification for the admin
+send_user($email);  // includes the unique code also 
+
+
+function send_admin($mail) {
 
 $subject = "$name registered ";
 
@@ -59,12 +65,34 @@ $opinion
 
 ";
 
-mail($mymail, $subject, $message);
+mail($mail, $subject, $message);
+}
+
+function send_user($mail) {
+
+	$subject = "TEDxGITAMUniversity Registration Code";
+
+	$message = " Below mentioned is a unique
+	code which confirms the process of registration, 
+	so please message the Unique Code to the 
+	mail tedxgitamuniversity@gmail.com.
+
+
+	The unique code is $unique
+
+	";
+
+	mail($mail,$subject,$message);
+}
+
+
 
 // Update the Datbase after each Successfull Registration
 
+$query = "INSERT INTO register (name,id,number,email,collorg,prev,favtalk) VALUES (:name,:id,:number:,:email,:collorg,:prev,:favtalk)";
+$mysql = $Db=>prepare($query);
+$mysql = execute(array(':name'=>$name,':id'=>$id,':number'=>$number,':email'=>$email,':collorg'=>$collorg,':prev'=>$prev,':favtalk'=>$favtalk));
 
-// After the Session has ended then redirect to the response page
-header('Location: response.php');
 exit();
 ?>
+
