@@ -1,50 +1,19 @@
-<?php
-/*
-Author : AkhilHector
-PHP : 5.6a
-*/
-session_start();
-
-// Store the errors in a array
- $notify = array();
- $response = false; // Update ar each stage if it is set to true
-
-// Init the Database with the credentials along with the database name
-
-$Serv = "localhost";
-$Db = "iamveerc_TedRegister";
-$usr = "iamveerc_akhil";
-$pwd = "akhil123!@#";
-
-$mymail = "contact@tedxgitamuniversity.com";
-
-// Establish a connection with the remote database with PHP Data Objects
-
-$sync = new PDO("mysql:host= $Serv; dbname= $Db",$usr,$pwd);
-
-function send($field) {
-	
-	$field = trim($field);
-	$field = stripcslashes($field);
-	$field = htmlspecialchars($field);
-
-	return $field;
-}
-
-$name = send($_POST['name']);   
-$id = send($_POST['id']);
-$number = send($_POST['number']);
-$email = send($_POST['email']);
-$collorg = send($_POST['collorg']);
-$prev = send($_POST['prev']);
-$favtalk = send($_POST['favtalk']);
+<?php 
 
 
-send_admin($myemail);  // notification for the admin
-send_user($email);  // includes the unique code also 
+$db_host= "localhost";
+$db_name="ghost";
+$db_user= "root";
+$db_pwd= "akhil";
+
+$connection = mysql_connect($db_host,$db_user,$db_pwd) or die("Error connecting to MYSQL: " . mysql_error());
+$database = mysql_select_db($db_name,$connection) or die("Error connecting to MYSQL: " . mysql_error());
 
 
-function send_admin($mail) {
+ $myemail = "akhilhector.1@gmail.com";
+
+
+
 
 $subject = "$name registered ";
 
@@ -53,6 +22,7 @@ $message = "
 	belongs to the college/organization $collorg. The
 	contact number of $name is $number
 
+Email : $email
 
 On a previous TED talk user reoprted
 $prev
@@ -60,39 +30,93 @@ $prev
 $name's favorite TED talk is 
 $prev
 
-$name opinion towards the TEDx community is:
-$opinion
-
 ";
 
-mail($mail, $subject, $message);
+mail($myemail, $subject, $message);
+
+
+function send($data, $problem='')
+{
+$data = trim($data);
+$data = stripslashes($data);
+$data = htmlspecialchars($data);
+if ($problem && strlen($data) == 0)
+{
+show_error($problem);
+}
+return $data;
 }
 
-function send_user($mail) {
+function show_error($myError)
+{
+?>
+<html>
+<body>
 
-	$subject = "TEDxGITAMUniversity Registration Code";
+<p>Please correct the following error:</p>
+<strong><?php echo $myError; ?></strong>
+<p>Hit the back button and try again</p>
 
-	$message = " Below mentioned is a unique
-	code which confirms the process of registration, 
-	so please message the Unique Code to the 
-	mail tedxgitamuniversity@gmail.com.
-
-
-	The unique code is $unique
-
-	";
-
-	mail($mail,$subject,$message);
-}
-
-
-
-// Update the Datbase after each Successfull Registration
-
-$query = "INSERT INTO register (name,id,number,email,collorg,prev,favtalk) VALUES (:name,:id,:number:,:email,:collorg,:prev,:favtalk)";
-$mysql = $Db=>prepare($query);
-$mysql = execute(array(':name'=>$name,':id'=>$id,':number'=>$number,':email'=>$email,':collorg'=>$collorg,':prev'=>$prev,':favtalk'=>$favtalk));
-
+</body>
+</html>
+<?php
 exit();
+}
+
+
+
+function newregistration() 
+{
+
+$name = $_POST['name'];   
+$id = $_POST['id'];
+$number = $_POST['number'];
+$email = $_POST['email'];
+$collorg = $_POST['collorg'];
+$prev = $_POST['prev'];
+$favtalk = $_POST['favtalk'];
+
+$query = "INSERT INTO register (name,id,number,email,collorg,prev,favtalk) VALUES ('$name','$id','$number','$email','$collorg','$prev','$favtalk')";
+
+
+
+$data = mysql_query($query) or die(mysql_error());
+
+    if($data) {
+        echo "Row inserted ";
+    }
+}
+
+function update()
+{
+    if(!empty($_POST['email']))
+    {
+        $query = mysql_query("SELECT * FROM register WHERE id = '$_POST[id]' AND email = '$_POST[email]' ") or die(mysql_error());
+        if (!$row = mysql_fetch_array($query) or die(mysql_error())) {
+            newregistration();
+        }
+
+        else 
+        {
+            echo "You have already been registered";
+        }
+    }
+}    
+
+if(isset($_POST['submit'])) {
+        update();
+    }
+
+
 ?>
 
+ 
+
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
