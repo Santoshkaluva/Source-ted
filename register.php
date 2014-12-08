@@ -63,7 +63,52 @@ function show_error($myError)
 exit();
 }
 
+$userid = $_POST['id'];
+$username = $_POST['name'];
+$temp = "TEDxGU";
+$store = "$temp$name";
+$adminmail = "akhilhector.1@gmail.com";
 
+confirm_code(); // sends the unique code to user and admin
+
+function confirm_code()
+{
+  $usermail = $_POST['email'];
+  $len = strlen($userid);
+  if($len >= 10) // in case the id is greater than 10 digits
+ {
+	$trim = substr("$userid",5,10);
+	$code = "$store$trim";
+	$message = " Thank you
+	for registering with us in order to 
+	confirm the registration please give
+        this code $code to the respective team,
+	identifying your completion of registration.
+";
+	$msg= "The user with $username and with the email address
+		$usermail has the unique code $code";
+
+ }
+  else if($len >=5 && $len < 10) //if the id is between 5 & 10 digits
+{
+ 	$trim = substr("$userid",0,5);
+	$code = "$store$trim";
+	$message = " Thank you
+	for registering with us in order to 
+	confirm the registration please give
+        this code $code to the respective team,
+	identifying your completion of registration.
+";
+	$msg= "The user with $username and with the email address
+		$usermail has the unique code $code";
+}
+
+  $subject = "Confirm your Registration";
+  $sub = "Confirm the registration";
+  
+	mail($usermail,$subject,$message);	
+	mail($adminmail,$sub,$msg);
+}
 
 function newregistration() 
 {
