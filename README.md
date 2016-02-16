@@ -1,8 +1,8 @@
 Source-ted
 ==========
 
-Tedx is an event that invites the speakers from diverse
-areas to speak about their ideas, this is the source of 
+TEDx is an event that invites speakers from diverse
+areas to express their ideas, this is just source of
 the website. Please visit ( www.tedxgitamuniversity.com)
 
 
