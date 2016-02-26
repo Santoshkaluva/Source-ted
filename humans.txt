@@ -3,11 +3,12 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Akhil -- Developer
+    Om —- Ninja —- @ethcelon
 
 # THANKS
 
-    <name>
+    Akhil Pandey and Om B
 
 # TECHNOLOGY COLOPHON
 
