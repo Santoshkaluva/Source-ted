@@ -1,0 +1,124 @@
+
+html {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	font-weight: 400 !important;
+}
+body {
+	margin-top: 0px !important;
+	padding-top: 0px !important;
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+.xcontainer {
+    margin-top: 0px;
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    border-bottom: 2px solid #e3e3e3;
+
+}
+
+.xheader {
+	background: #FFF !important;
+	width: 100%;
+	padding-top: 15px;
+}
+
+
+.xtitle {
+	font-size: 56px !important;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin-top: 0px !important;
+	margin-left: 90px;
+}
+
+.xfont {
+	color: #e62b1e !important;
+}
+
+.xnav {
+	font-size: 15px;
+	margin-left: 90px;
+}
+.xnave {
+	font-weight: bold;
+	line-height: 49px;
+	box-sizing: border-box;
+	padding-left: 10px;
+	padding-right: 10px;
+	color: #555 !important;
+}
+
+.xlogo {
+	background-color: transparent;
+    background-image: url(../img/logo_web.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+    text-indent: -9999em;
+    zoom: 1;
+    height: 80px;
+    width: 50%;
+    padding-bottom: 15px;
+    padding-top: 15px !important;
+    margin-left: 90px;
+}
+
+.dropdown-toggle {
+	padding-top: 0px !important;
+	padding-bottom: 0px !important;
+}
+
+.nav>li>a {
+color: #555 !important;
+padding-top: 0px !important;
+padding-bottom: 0px !important;
+}
+
+.nav>li>a:hover{
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+
+.box1 {
+	height: 534px;
+}
+
+.box1des {
+	margin-left: 90px;
+	font-size: 2em;
+	font-weight: 100;
+	font-family: "HelveticaNeueUltraLight", "HelveticaNeue-Ultra-Light", "Helvetica Neue Ultra Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Arial", sans-serif;
+	font-weight:100;
+	font-stretch:normal;
+	font-variant: small-caps;
+	padding-top: 50px;
+	line-height: 50px;
+	letter-spacing: 2px;
+	padding-left: 0px;
+	padding-right: 0px;
+	color:rgba(85, 85, 85, 0.65);
+}
+
+.box1pic {
+	background-image: url(../img/box1.jpg);
+	background-repeat: no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+	overflow: hidden;
+	text-indent: -9999em;
+	zoom: 1;
+	height: 500px;
+	width: 500px;
+	margin-top: 17px;
+	margin-bottom: 17px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
