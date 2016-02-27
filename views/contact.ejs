@@ -1,0 +1,197 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title></title>
+    
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
+    <link rel="stylesheet" href="css/prettyPhoto.css">
+
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script src="js/modernizr.custom.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>   
+    <script>
+        $(document).ready(function() {
+
+            $("#btn1").click(function() {
+                $("li>img").filter("#2014").css("display","inherit");
+            });
+
+            $("#btn2").click(function() {
+                $("li>img").filter("#2013").css("display","inherit");
+            });
+            
+            
+            $("li>img").filter("#2014").css("display","none");
+            $("li>img").filter("#2013").css("display","none");
+        });
+
+
+    </script>
+</head>
+<body>
+
+    <!-- HEADER -->
+
+    <div class="container">
+        <header class="xheader">
+            <a href="#"><img class="xlogo" src="/img/logo_web.png"/></a>
+            <p class="box1des pull-right" style="float: right;font-size: 1em;font-variant: normal;color: black;">Join us for the next session on <span class="xfont" style="font-size: 1.2em;color: black !important;">March 26<sup>th</sup></span> 2016</p>
+        </header>
+
+        <ul class="nav nav-pills xnav">
+            <li class="xnave"><a href="">Home</a></li>
+            <li role="presentation" class="dropdown xnave">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">Speakers <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li class="nave"><a href="">2016</a></li>
+                    <li class="nave"><a href="">2015</a></li>
+                    <li class="nave"><a href="">2014</a></li>
+                    <li class="nave"><a href="">2013</a></li>
+                </ul>
+            </li>
+            <li class="xnave"><a href="">Attend</a></li>
+            <li class="xnave"><a href="">Team</a></li>
+            <li class="xnave"><a href="">Partners</a></li>
+            <li class="xnave"><a href="">Contact</a></li>
+            <li class="xnave"><a href="">About</a></li>
+        </ul>
+    </div>
+
+    <div class="xcontainer"></div>
+
+    <!-- BOX 1 DESC -->
+
+    <div class="container" id="services" name="services">
+        <div class="row separator">
+            <div class="col-md-12"></div>
+        </div>
+        
+        <div class="row">
+            <h2 class="centered">The BIG Picture</h2>
+            <div class="row separator">
+                <div class="col-md-12"></div>
+            </div>
+            <p class="lead"> Registrations are based on excellence as shown in Essay and Statement of Purpose. Cost of registration for a Student INR 2000/- and for Corporate INR 3500/- respectively.</p>
+        </div>
+
+        <div class="row">
+            <h2 class="centered">Have anything to say?<h2>
+        </div>
+    </div>
+
+    <section id="contact">
+        <div class="container">
+            <div class="box last">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="status alert alert-success" style="display: none"></div>
+                        <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="custom_response.php" role="form">
+                            <div class="row">
+                               <div class="col-md-6">
+                                   <div class="form-group">
+                                       <input type="text" id="name" name="name" class="form-control" required="required" placeholder="Name">
+                                   </div>
+                               </div>
+                               
+                               <div class="col-md-6">
+                                   <div class="form-group">
+                                       <input type="text" id="email" name="email" class="form-control" required="required" placeholder="Email address">
+                                   </div>
+                               </div>
+                               
+                               <div class="col-md-6">
+                                   <div class="form-group">
+                                       <input type="text" id="phone" name="phone" class="form-control" required="required" placeholder="Phone No">
+                                   </div>
+                               </div>                                
+                           
+                               <div class="col-md-6">
+                                   <div class="form-group">
+                                       <input type="text" id="collorg" name="collorg" class="form-control" required="required" placeholder="College/Organization">
+                                   </div>
+                               </div>
+
+                           </div>
+                           <div class="row">
+                               <div class="col-md-12">
+                                   <div class="form-group">
+                                       <textarea name="message" id="message" required="required" class="form-control" rows="8" placeholder="Message"></textarea>
+                                   </div>
+                                   <div class="form-group">
+                                       <button type="submit" class="btn btn-ted2 btn-lg">Send Message</button>
+                                   </div>
+                               </div>
+                           </div>
+                           <p>Mail: <kbd><a href="mailto:tedxgitamuniversity@gmail.com">tedxgitamuniversity@gmail.com</a></kbd>
+                       </form>
+                   </div>
+                   <div class="col-md-6">
+                       <div class="row">
+                           <div class="col-md-6">
+                            <h2>Address</h2>
+                               <address>
+                                  <small>
+                                  GUSAC, GITAM University<br>
+                                  Rushikonda<br>
+                                  Visakhapatnam<br>
+                                  Andhra Pradesh<br>
+                                  India 530045
+                                  </small>
+                               </address>
+                           </div>
+                           <div class="col-md-6">
+                                   <h2>Partnerships</h2><br>
+                                   <small>Siddartha Varma, Licensee  <br>+91</small> 9876543210<br>
+                                   <small>Pranay Metta, Co-Organizer <br>+91</small> 9876543210
+                           </div>
+                       </div>
+                       <h2>Social</h2>
+                       <div class="row">
+                           <div class="col-md-6">
+                               <ul class="social">
+                                   <a href="https://www.facebook.com/TEDxGITAMUniversity" target="_blank">Facebook <span class="icon-facebook icon-social"></span> </a>
+
+                               </ul>
+                           </div>
+                           <div class="col-md-6">
+                               <ul class="social">
+                                   <a href="https://twitter.com/tedxgitamuniversity" target="_blank">Twitter <span class="icon-twitter icon-social"></span></a>
+                               </ul>
+                           </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <div class="section" style="background: #e3e3e3;">
+        <div class="container">
+            <footer style="width: 100%;text-align: center;">
+                <span class="">All Rights Reserved &copy;<a target="_blank" href="https://www.facebook.com/TEDxGITAMUniversity"><span class="xted">TED<sup>x</sup></span><span class="gu">GITAMUniversity 2016</span></a></span>
+            </footer>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>X
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/jquery.isotope.min.js"></script>
+    <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script> 
+    <script type="text/javascript" src="js/jquery.fancybox-media.js"></script> 
+    <script type="text/javascript" src="js/plugins.js"></script>
+
+</body>
+</html>
