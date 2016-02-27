@@ -16,10 +16,10 @@ module.exports.registration = function (foo) {
 		text:    "Thank you for registering to TEDxGITAMUniversity. You have completed the process of registration, After some time you will recieve a mail with the ticket as an attachment."
 	}, function (err, json) {
 		if (err) {
-			process.stdout.write(`${err}\n`);
+			process.stdout.write(err);
 		}
 		else {
-			process.stdout.write(`${json}\n`);
+			process.stdout.write(json);
 		}
 	});
 }
@@ -32,10 +32,10 @@ module.exports.contact = function (foo) {
 		text:    "Mailed from " + foo.name + " and the query is " + foo.query
 	}, function (err, json) {
 		if (err) {
-			process.stdout.write(`${err}\n`);
+			process.stdout.write(err);
 		}
 		else {
-			process.stdout.write(`${json}\n`);
+			process.stdout.write(json);
 		}
 	});
 }
@@ -50,10 +50,10 @@ module.exports.ticketattach = function (foo) {
 			files:   [{filename: foo.pdf, content: data}]
 		}, function (err, json) {
 			if (err) {
-				process.stdout.write(`${err}\n`);
+				process.stdout.write(err);
 			}
 			else {
-				process.stdout.write(`${json}\n`);
+				process.stdout.write(json);
 			}
 		});
 	});
