@@ -1,26 +1,23 @@
 /*
  * Express Router for serving the templates
- * Akhil Pandey
+ * Team Tedx
  * The MIT License
  */
-var http = require('http'),
-    express = require('express'),
-    fs = require('fs'),
-    bodyParser = require('body-parser'),
-    cookieParser = require('cookie-parser');
-
+var h = require('http'),
+    e = require('express'),
+    f = require('fs'),
+    m = require('./emailserver'),
+    b = require('body-parser');
 module.exports.app = function() {
         var port = process.env.PORT || 5000;
         var app = express();
         var router = express.Router();
-        var errorPage = fs.readFileSync("404.html", "UTF-8");
+        var errorPage = f.readFileSync("404.html", "UTF-8");
 
-        require('node-jsx').install();
         app.use(express.static('assets'));
-        app.set('title', "instaStore");
+        app.set('title', "tedx");
         app.set('view engine', 'ejs');
-        app.use(cookieParser());
-        app.use(bodyParser.json());
+        app.use(b.json());
         app.use(bodyParser.urlencoded({extended: true}));
 
         router.get('/', function(req, res) {
@@ -30,12 +27,12 @@ module.exports.app = function() {
         router.get('/[0-9]', function(req, res) {
                 res.redirect(errorPage);
         });
-
-        router.get('*', function(req, res) {
-                var match = 'views/' + req.params[0] + '.ejs';
-                fs.exists(match, function(present) {
+        
+        router.get('/:value', function(req, res) {
+                var match = 'views/' + req.params.value + '.ejs';
+                f.exists(match, function(present) {
                         if(present) {
-                                fs.readFile(match, function(err, data) {
+                                f.readFile(match, function(err, data) {
                                         if(err) {
                                                 res.send(errorPage.toStrng(), "UTF-8");
                                         }
