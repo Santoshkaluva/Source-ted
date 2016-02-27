@@ -1,0 +1,489 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="css/jquery.fancybox.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script src="js/modernizr.custom.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    
+    <script>
+            /*function engage()
+            { 
+                var option [],
+                    id  = $(''),
+                    val = $('');
+                $("li>img").not(".selected").css("display","none"); 
+                
+            }
+            function drop()
+        {
+            $("li>img").filter("#2013").show();
+            $("li>img").filter("#2014").show();
+        }
+        */
+            $(document).ready(function() {
+                
+                $("#btn1").click(function() {
+                $("li>img").filter("#2014").css("display","inherit");
+                });
+                
+                $("#btn2").click(function() {
+                $("li>img").filter("#2013").css("display","inherit");
+                });
+            
+            
+            $("li>img").filter("#2014").css("display","none");
+            $("li>img").filter("#2013").css("display","none");
+            });
+   
+    
+    </script>
+</head>
+<body>
+
+<!-- HEADER -->
+
+<div class="container">
+    <header class="xheader">
+        <a href="#"><img class="xlogo" src="/img/logo_web.png"/></a>
+        <p class="box1des pull-right" style="float: right;font-size: 1em;font-variant: normal;color: black;">Join us for the next session on <span class="xfont" style="font-size: 1.2em;color: black !important;">March 26<sup>th</sup></span> 2016</p>
+
+    </header>
+    <ul class="nav nav-pills xnav">
+    <li class="xnave"><a href="">Home</a></li>
+      <li role="presentation" class="dropdown xnave">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">
+          Speakers <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+            <li class="nave"><a href="">2016</a></li>
+            <li class="nave"><a href="">2015</a></li>
+            <li class="nave"><a href="">2014</a></li>
+            <li class="nave"><a href="">2013</a></li>
+        </ul>
+      </li>
+      <li class="xnave"><a href="">Attend</a></li>
+      <li class="xnave"><a href="">Team</a></li>
+      <li class="xnave"><a href="">Partners</a></li>
+      <li class="xnave"><a href="">Contact</a></li>
+      <li class="xnave"><a href="">About</a></li>
+    </ul>
+</div>
+<div class="xcontainer"></div>
+
+<!-- BOX 1 DESC -->
+
+<div class="container xmargin">
+    <div class="row">
+        <div class="col-md-6 box1des">
+            since the dawn of humanity, we have always wodnered what the big picture was. what does it mean to be us ? what does it mean to be me ? or you ? at <span class="xted">TED<sup>x</sup></span><span class="gu">GITAMUniveristy</span> 11 speakers will tell you what's their take on the world, and their life. their <span class="xfont" id="big">BIG</span> picture.
+
+        </div>
+
+        <div class="col-md-6 box1pic">
+            <img src="/img/big.gif" class="pull-right" />
+        </div>
+
+    </div>
+</div>
+
+<!-- BOX 2 OUR AWESOME SPEAKER PROFILE -->
+<div class="container">
+
+
+    <div class="row">
+        <div class="col-md-12" style="height: 1170px;">
+                <!--
+                <div class="row">
+                <div class="col-md-12">
+                <ul class="speakers-list">
+                    <li><a class="btn btn-ted active" href="#" TEDlist="*">All       </a></li>
+                    <li><a class="btn btn-ted muted" href="#" TEDlist=".2015">2015</a></li>
+                    <li><a class="btn btn-ted" href="#" TEDlist=".2014">2014</a></li>
+                    <li><a class="btn btn-ted" href="#" TEDlist=".2013">2013</a></li>
+                </ul>
+                </div>
+                </div>
+            -->
+            <div class="row">
+                <h1 id="xspeakers">OUR SPEAKERS</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <nav id="options" class="work-nav speakers-list">
+                        <ul id="filters" class="option-set list-inline" data-option-key="filter">
+
+                            <li><a href="#filter" data-option-value=".2015" class="selected">2015</a></li>
+                            <li><a href="#filter" data-option-value=".2014" id = "btn1">2014</a></li>
+                            <li><a href="#filter" data-option-value=".2013" id = "btn2">2013</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <section id="projects">
+                            <ul id="thumbs">
+                                <li class="item-thumbs col-md-2 2015 " >
+                                    <img src="img/2015/01.jpg" alt ="Ashima Narain" id="2015">
+                                </li>
+                                <li class="item-thumbs col-md-2 2015 " >
+                                    <img src="img/2015/02.jpg" alt ="Ramesh Lognathan">
+                                </li>
+
+                                <li class="item-thumbs col-md-2 2015 " >
+                                    <img src="img/2015/03.jpg" alt ="Atamjeet Singh Bawa" >
+                                </li>
+
+                                <li class="item-thumbs col-md-2 2015 " >
+                                    <img src="img/2015/04.jpg" alt ="Narayan Singh Rao">
+                                </li>
+
+                                <li class="item-thumbs col-md-2 2015 " >
+                                    <img src="img/2015/05.jpg" alt ="Nilima Achwal">
+                                </li>
+
+                                <li class="item-thumbs col-md-2 2015 " >
+                                    <img src="img/2015/06.jpg" alt ="Aakash Sinha">
+                                </li>
+
+                                <li class="item-thumbs col-md-2 2014" >
+                                    <img src="img/2014/01.jpg" alt="Sapna Vyas patel" id="2014">
+                                </li>
+
+                                <li class="item-thumbs col-md-2 2014 " >
+                                    <img src="img/2014/02.jpg" alt="Sapna Vyas patel" id="2014" >
+                                </li>
+
+                                <li class="item-thumbs col-md-2 2014 " >
+                                    <img src="img/2014/03.jpg" alt="Sapna Vyas patel" id="2014">
+                                </li>                                                        
+
+                                <li class="item-thumbs col-md-2 2014 " >
+                                    <img src="img/2014/04.jpg" alt="Sapna Vyas patel" id="2014">
+                                </li>
+
+                                <li class="item-thumbs col-md-2 2014 " >
+                                    <img src="img/2014/05.jpg" alt="Sapna Vyas patel" id="2014">
+                                </li>
+
+                                <li class="item-thumbs col-md-2 2014 " >
+                                    <img src="img/2014/06.jpg" alt="Sapna Vyas patel" id="2014">
+                                </li>     
+
+                                <li class="item-thumbs col-md-2 2013 ">
+                                    <img src="img/2013/01.jpg" alt="Prasanna Kumar" id="2013">
+                                </li>
+
+
+                                <li class="item-thumbs col-md-2 2013 ">
+                                    <img src="img/2013/02.jpg" alt="Anumana Hoskere" id="2013">
+                                </li>
+
+                                <li class="item-thumbs col-md-2 2013 ">
+                                    <img src="img/2013/03.jpg" alt="Harish Iyer" id="2013">
+                                </li>
+
+
+                                <li class="item-thumbs col-md-2 2013 ">
+                                    <img src="img/2013/04.jpg" alt="Ojas Sunita Vinay" id="2013">
+                                </li>
+
+
+                                <li class="item-thumbs col-md-2 2013 ">
+                                    <img src="img/2013/05.jpg" alt="Joseph Radhik" id="2013">
+                                </li>
+
+                                <li class="item-thumbs col-md-2 2013 ">
+                                    <img src="img/2013/06.jpg" alt="Mitchell London" id="2013">
+                                </li>
+
+                                
+                                <!-- BOX 3 CAROUSEL -->
+
+                                <br>
+                                <br>
+                                <br>
+
+                <div class="col-md-12" style="margin-top: 160px;">
+                    <div class="quote"><i class="fa fa-quote-left fa-4x"></i></div>
+                    <div class="carousel slide" id="fade-quote-carousel" data-ride="carousel" data-interval="3000">
+    
+                      <ol class="carousel-indicators">
+                        <li data-target="#fade-quote-carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#fade-quote-carousel" data-slide-to="1"></li>
+                        <li data-target="#fade-quote-carousel" data-slide-to="2"></li>
+                        <li data-target="#fade-quote-carousel" data-slide-to="3"></li>
+                        <li data-target="#fade-quote-carousel" data-slide-to="4"></li>
+                        <li data-target="#fade-quote-carousel" data-slide-to="5"></li>
+                        <li data-target="#fade-quote-carousel" data-slide-to="6"></li>  
+                        <li data-target="#fade-quote-carousel" data-slide-to="7"></li>
+                        <li data-target="#fade-quote-carousel" data-slide-to="8"></li>
+                        <li data-target="#fade-quote-carousel" data-slide-to="9"></li>
+                        <li data-target="#fade-quote-carousel" data-slide-to="10"></li>
+                                                              
+                      </ol>
+
+                      <div class="carousel-inner">
+                      
+
+                        
+                        <div class= "active item">
+                            <img src="img/carousel/sp12.jpg">
+                        </div>
+                        
+                        <div class= "item">
+                            <img src="img/carousel/sp11.jpg">
+                        </div>
+                        
+                        <div class= "item">
+                            <img src="img/carousel/sp10.jpg">
+                        </div>
+                        
+                        <div class= "item">
+                            <img src="img/carousel/sp9.jpg">
+                        </div>
+                        
+                        <div class= "item">
+                            <img src="img/carousel/sp8.jpg">
+                        </div>
+                        
+                        <div class= "item">
+                            <img src="img/carousel/sp7.jpg">
+                        </div>
+                        
+                        <div class= "item">
+                            <img src="img/carousel/sp6.jpg">
+                        </div>
+                        
+                        <div class= "item">
+                            <img src="img/carousel/sp5.jpg">
+                        </div>
+                        
+                        <div class= "item">
+                            <img src="img/carousel/sp4.jpg">
+                        </div>
+                        
+                        <div class= "item">
+                            <img src="img/carousel/sp3.jpg">
+                        </div>
+                        
+                        <div class= "item">
+                            <img src="img/carousel/sp2.jpg">
+                        </div>  
+
+
+                      </div>
+                    </div>
+                </div>                          
+
+                            <br>
+                            <br>
+                                <li class="item-thumbs col-md-2 2015 " style="padding-top: 670px;" >
+                                    <img src="img/2015/07.jpg" alt ="Shanno">
+                                </li>
+
+                                <li class="item-thumbs col-md-2 2015 " style="padding-top: 670px;">
+                                    <img src="img/2015/08.jpg" alt ="Gopichand Katragadda" >
+                                </li>
+
+                                <li class="item-thumbs col-md-2 2015 " style="padding-top: 670px;">
+                                    <img src="img/2015/09.jpg" alt ="Mathew Spice" >
+                                </li>
+
+                                <li class="item-thumbs col-md-2 2015 " style="padding-top: 670px;">
+                                    <img src="img/2015/10.jpg" alt ="Pranav Kumar Suresh" >
+                                </li>
+
+                                <li class="item-thumbs col-md-2 2015 " style="padding-top: 670px;">
+                                    <img src="img/2015/11.jpg" alt ="David" >
+                                </li>
+
+                                <li class="item-thumbs col-md-2 2015 " style="padding-top: 670px;">
+                                    <img src="img/2015/12.jpg" alt ="Rashika">
+                                </li>
+
+
+                                
+
+                                <li class="item-thumbs col-md-2 2014 " style="padding-top: 670px;">
+                                    <img src="img/2014/07.jpg" alt="Anand Gandhi" id="2014">
+                                </li>                                       
+
+                                <li class="item-thumbs col-md-2 2014 " style="padding-top: 670px;">
+                                    <img src="img/2014/08.jpg" alt="Ashwin Mohan" id="2014">
+                                </li>                            
+
+                                <li class="item-thumbs col-md-2 2014 " style="padding-top: 670px;">
+                                    <img src="img/2014/09.jpg" alt="Depak" id="2014">
+                                </li>                            
+
+                                <li class="item-thumbs col-md-2 2014" style="padding-top: 670px;">
+                                    <img src="img/2014/10.jpg" alt="Robin Chaurasiya" id="2014">
+                                </li> 
+
+                                <li class="item-thumbs col-md-2 2014 " style="padding-top: 670px;">
+                                    <img src="img/2014/11.jpg" alt="Sandeep Bachche" id="2014">
+                                </li>                            
+
+                                <li class="item-thumbs col-md-2 2014 " style="padding-top: 670px;">
+                                    <img src="img/2014/12.jpg" alt="STM Veerbahu" id="2014">
+                                </li>                                                       
+
+                                
+
+
+                                <li class="item-thumbs col-md-2 2013" style="padding-top: 670px;">
+                                    <img src="img/2013/07.jpg" alt="Rakesh Reddy Dubbudu" id="2013">
+                                </li>
+
+
+                                <li class="item-thumbs col-md-2 2013 " style="padding-top: 670px;">
+                                    <img src="img/2013/08.jpg" alt="Baba Prasad" id="2013">
+                                </li>
+                            </ul>
+                        </section>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- BOX 3 CAROUSEL 
+    <section id="carousel">
+        <div class="container xcarousel">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="quote"><i class="fa fa-quote-left fa-4x"></i></div>
+                    <div class="carousel slide" id="fade-quote-carousel" data-ride="carousel" data-interval="3000">
+    
+                      <ol class="carousel-indicators">
+                        <li data-target="#fade-quote-carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#fade-quote-carousel" data-slide-to="1"></li>
+                        <li data-target="#fade-quote-carousel" data-slide-to="2"></li>
+                        <li data-target="#fade-quote-carousel" data-slide-to="3"></li>
+                        <li data-target="#fade-quote-carousel" data-slide-to="4"></li>
+                        <li data-target="#fade-quote-carousel" data-slide-to="5"></li>
+                        <li data-target="#fade-quote-carousel" data-slide-to="6"></li>  
+                        <li data-target="#fade-quote-carousel" data-slide-to="7"></li>
+                        <li data-target="#fade-quote-carousel" data-slide-to="8"></li>
+                        <li data-target="#fade-quote-carousel" data-slide-to="9"></li>
+                        <li data-target="#fade-quote-carousel" data-slide-to="10"></li>
+                        <li data-target="#fade-quote-carousel" data-slide-to="11"></li>
+                        <li data-target="#fade-quote-carousel" data-slide-to="12"></li>
+                        <li data-target="#fade-quote-carousel" data-slide-to="13"></li>
+                        <li data-target="#fade-quote-carousel" data-slide-to="14"></li>                                                               
+                      </ol>
+
+                      <div class="carousel-inner">
+                      
+                       <div class= "active item">
+                            <img src="img/carousel/tmp2.jpg">
+                        </div>
+                       <div class="item">
+                            <img src="img/carousel/tmp1.jpg">
+                        </div>
+                        <div class="item">
+                            <img src="img/carousel/tmp.jpg">                              
+                        </div>
+                        
+                        <div class= "item">
+                            <img src="img/carousel/sp12.jpg">
+                        </div>
+                        
+                        <div class= "item">
+                            <img src="img/carousel/sp11.jpg">
+                        </div>
+                        
+                        <div class= "item">
+                            <img src="img/carousel/sp10.jpg">
+                        </div>
+                        
+                        <div class= "item">
+                            <img src="img/carousel/sp9.jpg">
+                        </div>
+                        
+                        <div class= "item">
+                            <img src="img/carousel/sp8.jpg">
+                        </div>
+                        
+                        <div class= "item">
+                            <img src="img/carousel/sp7.jpg">
+                        </div>
+                        
+                        <div class= "item">
+                            <img src="img/carousel/sp6.jpg">
+                        </div>
+                        
+                        <div class= "item">
+                            <img src="img/carousel/sp5.jpg">
+                        </div>
+                        
+                        <div class= "item">
+                            <img src="img/carousel/sp4.jpg">
+                        </div>
+                        
+                        <div class= "item">
+                            <img src="img/carousel/sp3.jpg">
+                        </div>
+                        
+                        <div class= "item">
+                            <img src="img/carousel/sp2.jpg">
+                        </div>  
+                        <div class="item">
+                            <img src="img/carousel/sp1.jpg">
+                        </div>  
+
+                      </div>
+                    </div>
+                </div>                          
+            </div>
+        </div>
+    </section>
+-->
+
+<div class="container">
+    <p>
+        THIS IS THE END
+    </p>
+</div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
+
+    <script src="js/vendor/bootstrap.min.js"></script>
+
+    <script src="js/main.js"></script>
+    <script type="text/javascript" src="js/jquery.isotope.min.js"></script>
+    <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/jquery.fancybox.pack.js"></script> 
+    <script src="js/jquery.fancybox-media.js"></script> 
+    <script src="js/plugins.js"></script>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+    </script>
+</body>
+</html>
