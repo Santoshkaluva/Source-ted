@@ -1,5 +1,6 @@
-# logs
+# logs, other stuff
 *.log
+views/.DS_Store
 
 # Dependencies
 node_modules/

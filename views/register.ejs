@@ -1,0 +1,216 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title></title>
+    
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
+    <link rel="stylesheet" href="css/prettyPhoto.css">
+
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script src="js/modernizr.custom.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>   
+    <script>
+        $(document).ready(function() {
+
+            $("#btn1").click(function() {
+                $("li>img").filter("#2014").css("display","inherit");
+            });
+
+            $("#btn2").click(function() {
+                $("li>img").filter("#2013").css("display","inherit");
+            });
+            
+            
+            $("li>img").filter("#2014").css("display","none");
+            $("li>img").filter("#2013").css("display","none");
+        });
+
+
+    </script>
+</head>
+<body>
+
+    <!-- HEADER -->
+
+    <div class="container">
+        <header class="xheader">
+            <a href="#"><img class="xlogo" src="/img/logo_web.png"/></a>
+            <p class="box1des pull-right" style="float: right;font-size: 1em;font-variant: normal;color: black;">Join us for the next session on <span class="xfont" style="font-size: 1.2em;color: black !important;">March 26<sup>th</sup></span> 2016</p>
+        </header>
+
+        <ul class="nav nav-pills xnav">
+            <li class="xnave"><a href="">Home</a></li>
+            <li role="presentation" class="dropdown xnave">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false"> Speakers <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li class="nave"><a href="">2016</a></li>
+                    <li class="nave"><a href="">2015</a></li>
+                    <li class="nave"><a href="">2014</a></li>
+                    <li class="nave"><a href="">2013</a></li>
+                </ul>
+            </li>
+            <li class="xnave"><a href="">Attend</a></li>
+            <li class="xnave"><a href="">Team</a></li>
+            <li class="xnave"><a href="">Partners</a></li>
+            <li class="xnave"><a href="">Contact</a></li>
+            <li class="xnave"><a href="">About</a></li>
+        </ul>
+    </div>
+    <div class="xcontainer"></div>
+
+    <!-- BOXREG-->
+
+    <div class="container" >
+        <br>
+        <br>
+        <div class="row">
+            <h2 class="centered">Attend <span class="red">TEDxGITAMUniversity2015</span>, Inside <span class="red">Out</span></h2>
+            <hr>
+            <br>
+            <div class="col-lg-offset-2 col-lg-8">
+                <h4>Registrations will be given on first-come basis. 
+                </h4> <br>
+                <h4>Fill the Registration details below.We will get back to you soon, confirming your participation and providing the payment gateway.
+                </h4> <br>
+
+                <hr>
+
+                <h4 class="centered">Please check your email for a unique ID which will help you get through further registration process.</h4>
+                <br>
+                <h3><code>Note:</code> If you donot recieve a mail hearing from us please check your <span class="red">Spam List</span> or contact us at <span class="red">attendtedxgitamuniversity@gmail.com</span> regarding any technical glitches.</h3>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <br>
+            <br>
+            <h2 class="centered">Registration Form</h2>
+            <hr>
+            <br>
+        </div>
+    </div>
+
+
+    <section id="main">
+        <div class="container">
+            <div class="boxrg last">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h2 class="centered">Details</h2>
+                        <p>Please be specific to the form details and answer in brief. If Any thing wrong with the registration form <br>send us an email at <kbd><a href="mailto:tedxgitamuniversity@gmail.com">tedxgitamuniversity@gmail.com</a></kbd></p>
+                        
+                        
+                        <form id="registration-form" class="registration-form" name="registration-form" method="post" action="response.php" role="form">
+                            <div class="row">
+                                <div class="col-sm-9">
+                                    <div class="form-group">
+                                        <span class="label label-info">Your Name</span>
+                                        <hr>
+                                        <input type="text" id="name" name="name" class="form-control" required="required" placeholder="Name">
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-9">
+                                    <div class="form-group">
+                                        <span class="label label-danger">Enter a Valid ID card Number </span>
+                                        <hr>
+                                        <input type="text" id="id" name="id" class="form-control" required="required" placeholder="Id">
+                                    </div>
+                                </div>
+                                
+                                
+                                <div class="col-sm-9">
+                                    <div class="form-group">
+                                        <span class="label label-warning">Specify Your Email Addresss </span>
+                                        <hr>
+                                        <input type="text" id="email" name="email" class="form-control" required="required" placeholder="Email address">
+                                    </div>
+                                </div>
+                                
+                                <div class="col-sm-9">
+                                    <div class="form-group">
+                                        <span class="label label-success">Type in your Contact Number</span>
+                                        <hr>
+                                        <input type="text" id="number" name="number" class="form-control" required="required" placeholder="Phone No">
+                                    </div>
+                                </div>                                
+
+                                <div class="col-sm-9">
+                                    <div class="form-group">
+                                        <span class="label label-danger">Specify from which College/Institute or Organization you Belong</span>
+                                        <hr>
+                                        <input type="text" id="collorg" name="collorg" class="form-control" required="required" placeholder="College/Organization">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-9">
+                                    <div class="form-group">
+                                        <span class="label label-info">Have you attended a TEDx Conference in the Past? If yes which one?</span>
+                                        <hr>
+                                        <input type="text" id="prev" name="prev" class="form-control" required="required" placeholder="I have / havenot.....">
+                                    </div>
+                                </div>  
+                            </div>     
+
+                            <div class="row">
+                                <div class="col-sm-9">
+                                    <div class="form-group">
+                                        <span class="label label-warning">What is your favorite TED talk?</span>
+                                        <hr>
+                                        <input type="text" id="favtalk" name="favtalk" class="form-control" required="required" placeholder="TED Talk..">
+                                    </div>
+                                </div>  
+                            </div>   
+
+                            <div class="row">
+                                <div class="col-sm-9">
+
+                                    <div class="form-group">
+                                        <input type="submit" name="submit" class="btn btn-success btn-lg">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <div class="section" style="background: #e3e3e3;">
+        <div class="container">
+            <footer style="width: 100%;text-align: center;">
+                <span class="">All Rights Reserved &copy;<a target="_blank" href="https://www.facebook.com/TEDxGITAMUniversity"><span class="xted">TED<sup>x</sup></span><span class="gu">GITAMUniversity 2016</span></a></span>
+            </footer>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>X
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/jquery.isotope.min.js"></script>
+    <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script> 
+    <script type="text/javascript" src="js/jquery.fancybox-media.js"></script> 
+    <script type="text/javascript" src="js/plugins.js"></script>
+
+</body>
+</html>

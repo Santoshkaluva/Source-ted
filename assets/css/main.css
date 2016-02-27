@@ -324,3 +324,143 @@ padding-bottom: 0px !important;
 	font-size: 1.2em;
 	letter-spacing: 1px;
 }
+
+/* CONTACT - hector */
+
+#contact {
+    font-size: 1.1em;
+}
+#contact p {
+    line-height: 28px;
+    margin-bottom: 25px;
+    font-size: 1.2em;
+}
+
+#contact .box a {
+    color: #888;
+}
+#contact .box a:hover {
+    color: #e62b1e;
+}
+
+#contact .box input[type="text"],
+#contact .box input[type="email"],
+#contact .box textarea {
+    background-color: #fff;
+    opacity: 0.8;
+    border: 0;
+        -webkit-transition: 400ms;
+        -moz-transition: 400ms;
+        -o-transition: 400ms;
+       transition: 400ms;
+}
+
+#contact .box input[type="text"]:focus,
+#contact .box input[type="email"]:focus,
+#contact .box textarea:focus {
+    background-color: #fff;
+        -webkit-box-shadow:none;
+        -moz-box-shadow:none;
+        -o-box-shadow:none;
+       box-shadow: none; 
+}
+.box {
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: black; 
+    border-radius: 140px;
+    border-bottom: 1px solid #e9e9e9;
+    color: #f2f2f2;
+}
+
+.box.first {
+    margin-top: -40px;
+    border-radius: 5px 5px 0 0;
+}
+
+.box.last {
+    border-radius: 0 0 5px 5px;
+}
+
+.box h2 {
+    position: relative;
+    padding-bottom: 10px;
+    padding-right: 30px;
+    border-radius: 5px;
+    font-size: 45px;
+    display: inline-block;
+    margin-top: 0px;
+}
+
+/* REGISTER -- hector */
+
+#main .boxrg a {
+    color: #fff;
+}
+#main .boxrg a:hover {
+    color: #fff;
+}
+
+#main .boxrg input[type="text"],
+#main .boxrg input[type="email"],
+#main .boxrg textarea {
+    background-color: #fff;
+    opacity: 0.8;
+    border: 0;
+        -webkit-transition: 400ms;
+        -moz-transition: 400ms;
+        -o-transition: 400ms;
+       transition: 400ms;
+}
+
+#main .boxrg input[type="text"]:focus,
+#main .boxrg input[type="email"]:focus,
+#main .boxrg textarea:focus {
+    background-color: #fff;
+        -webkit-box-shadow:none;
+        -moz-box-shadow:none;
+        -o-box-shadow:none;
+       box-shadow: none; 
+}
+.boxrg {
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #e4e4e4; 
+    border-radius: 140px;
+    border-bottom: 1px solid #e9e9e9;
+}
+
+.boxrg.first {
+    margin-top: -40px;
+    border-radius: 5px 5px 0 0;
+}
+
+.boxrg .end {
+    border-radius: 0 0 5px 5px;
+}
+
+.boxrg h2 {
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    color: #000;
+    font-size: 45px;
+    display: inline-block;
+
+}
+.boxrg p {
+  color: #000;
+}
+  
+
+

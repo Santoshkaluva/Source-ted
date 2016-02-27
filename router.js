@@ -22,22 +22,34 @@ module.exports.app = function() {
         app.use(b.json());
         app.use(b.urlencoded({extended: true}));
 
-        router.get('/', function(req, res) {
+        router.get('/', function (req, res) {
                 res.render('main.ejs');
         });
 
-        router.get('/[0-9]', function(req, res) {
+        router.get('/about', function (req, res) {
+                res.render('about.ejs');
+        });
+
+        router.get('/contact', function (req, res) {
+                res.render('contact.ejs');
+        });
+
+        router.get('/register', function (req, res) {
+                res.render('register.ejs');
+        });
+
+        router.get('/[0-9]', function (req, res) {
                 res.redirect(errorPage);
         });
 
         router.get('/:value', function(req, res) {
-                var match = 'views/' + req.params.value + '.ejs';
+                var match = 'views/' + req.params.value;
                 f.exists(match, function(present) {
                         if(present) {
                                 f.readFile(match, function(err, data) {
                                         if(err) {
-                                                res.send(errorPage.toStrng(), "UTF-8");
-                                                console.log("GET/" + match + " couldnot be processed");
+                                                res.send(errorPage.toString(), "UTF-8");
+                                                console.log("GET:" + match + " couldnot be processed");
                                         }
                                         else {
                                                 res.end(data, "UTF-8");
@@ -46,7 +58,7 @@ module.exports.app = function() {
                         }
                         else {
                                 res.end(errorPage.toString(), "UTF-8");
-                                console.log("GET/ " + match + " couldnot be processed");
+                                console.log("GET:" + match + " couldnot be processed");
                         }
                 });
         });
