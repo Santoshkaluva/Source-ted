@@ -21,8 +21,9 @@ module.exports.app = function() {
         app.use(bodyParser.urlencoded({extended: true}));
 
         router.get('/', function(req, res) {
-                res.render('index.ejs');
+                res.render('main.ejs');
         });
+
 
         router.get('/[0-9]', function(req, res) {
                 res.redirect(errorPage);

@@ -25,7 +25,7 @@ body {
 .xheader {
 	background: #FFF !important;
 	width: 100%;
-	padding-top: 15px;
+	padding-top: 1em;
 }
 
 
@@ -36,14 +36,37 @@ body {
 	margin-top: 0px !important;
 	margin-left: 90px;
 }
+.xted {
+	color: #e62b1e !important;
+	font-variant: normal !important;
+	font-weight: 900 !important;
+	text-transform: none;
+	letter-spacing: -1px;
+	font-family: "HelveticaNeueUltraLight", "HelveticaNeue-Ultra-Light", "Helvetica Neue Ultra Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Arial", sans-serif;
+}
 
 .xfont {
 	color: #e62b1e !important;
+	font-variant: normal !important;
+	font-weight: 900 !important;
+	text-transform: none;
+	font-family: "HelveticaNeueUltraLight", "HelveticaNeue-Ultra-Light", "Helvetica Neue Ultra Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Arial", sans-serif;
+}
+#big {
+	letter-spacing: 1px !important;
+	font-size: 1.2em;
+}
+.gu {
+	font-family: "HelveticaNeueUltraLight", "HelveticaNeue-Ultra-Light", "Helvetica Neue Ultra Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Arial", sans-serif;
+	font-variant: normal !important;
+	text-transform: none;
+	font-weight: 100;
+	color: black;
+	letter-spacing: -1px;
 }
 
 .xnav {
-	font-size: 15px;
-	margin-left: 90px;
+	font-size: 1em;
 }
 .xnave {
 	font-weight: bold;
@@ -55,19 +78,12 @@ body {
 }
 
 .xlogo {
-	background-color: transparent;
-    background-image: url(../img/logo_web.png);
-    background-repeat: no-repeat;
+	
     display: inline-block;
     vertical-align: middle;
-    overflow: hidden;
-    text-indent: -9999em;
     zoom: 1;
-    height: 80px;
-    width: 50%;
-    padding-bottom: 15px;
-    padding-top: 15px !important;
-    margin-left: 90px;
+    padding-bottom: 1em;
+    padding-top: 1em !important;
 }
 
 .dropdown-toggle {
@@ -88,37 +104,189 @@ padding-bottom: 0px !important;
 
 
 .box1 {
-	height: 534px;
+	height: 30em;
 }
 
 .box1des {
-	margin-left: 90px;
 	font-size: 2em;
 	font-weight: 100;
 	font-family: "HelveticaNeueUltraLight", "HelveticaNeue-Ultra-Light", "Helvetica Neue Ultra Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Arial", sans-serif;
-	font-weight:100;
 	font-stretch:normal;
 	font-variant: small-caps;
-	padding-top: 50px;
-	line-height: 50px;
+	padding-top: 3em;
+	line-height: 1.5em;
 	letter-spacing: 2px;
-	padding-left: 0px;
-	padding-right: 0px;
 	color:rgba(85, 85, 85, 0.65);
 }
 
 .box1pic {
-	background-image: url(../img/box1.jpg);
-	background-repeat: no-repeat;
 	display: inline-block;
 	vertical-align: middle;
-	overflow: hidden;
-	text-indent: -9999em;
 	zoom: 1;
-	height: 500px;
-	width: 500px;
-	margin-top: 17px;
-	margin-bottom: 17px;
-	padding-left: 0px;
-	padding-right: 0px;
 }
+
+.xmargin {
+	margin-bottom: 1em;
+	margin-top: 1em;
+}
+
+
+/* CAROUSEL */
+
+#fade-quote-carousel.carousel {
+  text-overflow:ellipsis;
+}
+#fade-quote-carousel.carousel .carousel-inner .item {
+          align-self: center;
+          height: 46em;
+          text-overflow:ellipsis;
+}
+#fade-quote-carousel.carousel .carousel-indicators {
+  top: -1.5em;
+}
+#fade-quote-carousel.carousel .carousel-indicators > li {
+  /*background-color: #e84a64;*/
+  background-color: black;
+  border: none;
+}
+#fade-quote-carousel blockquote {
+    text-align: justify;
+    border: none;
+}
+
+.xcarousel {
+	background: black;
+	padding-top: 2em;
+}
+
+/* SPEAK FOR URSELF */
+
+.speakers-displays,
+.speakers-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 -20px 20px 0;
+}
+.speakers-list > li {
+  display: inline-block;
+}
+
+#xspeakers {
+	font-size: 2em;
+	font-weight: 100;
+	font-family: "HelveticaNeueUltraLight", "HelveticaNeue-Ultra-Light", "Helvetica Neue Ultra Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Arial", sans-serif;
+	font-stretch:normal;
+	font-variant: small-caps;
+	padding-top: 1em;
+	line-height: 1.5em;
+	letter-spacing: 2px;
+	color:rgba(85, 85, 85, 0.65);
+	text-align: center;
+}
+
+.isotope-item {
+  z-index: 2;
+}
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  -ms-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+}
+.isotope {
+  -webkit-transition-property: height, width;
+  -moz-transition-property: height, width;
+  -ms-transition-property: height, width;
+  -o-transition-property: height, width;
+  transition-property: height, width;
+}
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+  -moz-transition-property: -moz-transform, opacity;
+  -ms-transition-property: -ms-transform, opacity;
+  -o-transition-property: -o-transform, opacity;
+  transition-property: transform, opacity;
+}
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+  -moz-transition-duration: 0s;
+  -ms-transition-duration: 0s;
+  -o-transition-duration: 0s;
+  transition-duration: 0s;
+}
+
+.isotope.infinite-scrolling {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
+.item-thumbs {
+    position: relative;
+    overflow: hidden;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+
+.work-nav #filters {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.work-nav #filters li {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 0;
+}
+
+.work-nav #filters li a {
+    color: #7F8289;
+    font-size: 36px;
+    display: block;
+    text-decoration: none;
+}
+
+.work-nav #filters li a:hover {
+    color: #000000;
+}
+
+.work-nav #filters li a.selected {
+    color: #DE5E60;
+}
+
+.year-separator {
+    color: #7F8289;
+    font-size: 36px;
+    display: block;
+    text-decoration: none;
+}
+
+#thumbs {
+    margin: 0;
+    padding: 0;
+}
+
+#thumbs li {
+    list-style-type: none;
+}
+
+#thumbs li img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 1em;
+}
+
