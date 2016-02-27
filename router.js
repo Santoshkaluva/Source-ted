@@ -3,11 +3,13 @@
  * Team Tedx
  * The MIT License
  */
+
 var h = require('http'),
     e = require('express'),
     f = require('fs'),
     m = require('./emailserver'),
     b = require('body-parser');
+
 module.exports.app = function() {
         var port = process.env.PORT || 5000;
         var app = express();
@@ -36,6 +38,7 @@ module.exports.app = function() {
                                 f.readFile(match, function(err, data) {
                                         if(err) {
                                                 res.send(errorPage.toStrng(), "UTF-8");
+                                                console.log("GET/" + match + " couldnot be processed");
                                         }
                                         else {
                                                 res.end(data, "UTF-8");
@@ -44,6 +47,7 @@ module.exports.app = function() {
                         }
                         else {
                                 res.end(errorPage.toString(), "UTF-8");
+                                console.log("GET/ " + match + " couldnot be processed");
                         }
                 });
         });
