@@ -34,7 +34,7 @@ module.exports.app = function() {
                 res.render('contact.ejs');
         });
 
-        router.get('/register', function (req, res) {
+        router.get('/attend', function (req, res) {
                 res.render('register.ejs');
         });
 
