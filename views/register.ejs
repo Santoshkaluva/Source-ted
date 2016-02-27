@@ -17,7 +17,10 @@
 
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     <script src="js/modernizr.custom.js"></script>
-    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>   
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+
     <script>
         $(document).ready(function() {
 
@@ -43,14 +46,14 @@
 
     <div class="container">
         <header class="xheader">
-            <a href="#"><img class="xlogo" src="/img/logo_web.png"/></a>
+            <a href="/"><img class="xlogo" src="/img/logo_web.png"/></a>
             <p class="box1des pull-right" style="float: right;font-size: 1em;font-variant: normal;color: black;">Join us for the next session on <span class="xfont" style="font-size: 1.2em;color: black !important;">March 26<sup>th</sup></span> 2016</p>
         </header>
 
         <ul class="nav nav-pills xnav">
-            <li class="xnave"><a href="">Home</a></li>
+            <li class="xnave"><a href="/">Home</a></li>
             <li role="presentation" class="dropdown xnave">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false"> Speakers <span class="caret"></span>
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">Speakers <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
                     <li class="nave"><a href="">2016</a></li>
@@ -59,11 +62,11 @@
                     <li class="nave"><a href="">2013</a></li>
                 </ul>
             </li>
-            <li class="xnave"><a href="">Attend</a></li>
+            <li class="xnave"><a href="/register">Attend</a></li>
             <li class="xnave"><a href="">Team</a></li>
             <li class="xnave"><a href="">Partners</a></li>
             <li class="xnave"><a href="">Contact</a></li>
-            <li class="xnave"><a href="">About</a></li>
+            <li class="xnave"><a href="/about">About</a></li>
         </ul>
     </div>
     <div class="xcontainer"></div>
@@ -71,128 +74,88 @@
     <!-- BOXREG-->
 
     <div class="container" >
-        <br>
-        <br>
+
         <div class="row">
-            <h2 class="centered">Attend <span class="red">TEDxGITAMUniversity2015</span>, Inside <span class="red">Out</span></h2>
-            <hr>
-            <br>
-            <div class="col-lg-offset-2 col-lg-8">
-                <h4>Registrations will be given on first-come basis. 
-                </h4> <br>
-                <h4>Fill the Registration details below.We will get back to you soon, confirming your participation and providing the payment gateway.
-                </h4> <br>
-
-                <hr>
-
-                <h4 class="centered">Please check your email for a unique ID which will help you get through further registration process.</h4>
-                <br>
-                <h3><code>Note:</code> If you donot recieve a mail hearing from us please check your <span class="red">Spam List</span> or contact us at <span class="red">attendtedxgitamuniversity@gmail.com</span> regarding any technical glitches.</h3>
-
+            <div class="col-md-12 box1des2">
+                <h1>To be an attendee, </h1>
+                <p>1. Fill the registration form below<br>2. Complete the payment. The ticket price for students is 2000INR and 3500INR for buisiness/corporate attendees.<br>3. Save and bring your ticket on the day of the talks</p>
             </div>
         </div>
 
+
         <div class="row">
-            <br>
-            <br>
-            <h2 class="centered">Registration Form</h2>
-            <hr>
-            <br>
-        </div>
-    </div>
+            <div class="col-md-12 box1des2">
+                <h1>The Form</h1>
+                <p>For help, send us an email at <a href="mailto:tedxgitamuniversity@gmail.com">tedxgitamuniversity@gmail.com</a></p>
 
 
-    <section id="main">
-        <div class="container">
-            <div class="boxrg last">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <h2 class="centered">Details</h2>
-                        <p>Please be specific to the form details and answer in brief. If Any thing wrong with the registration form <br>send us an email at <kbd><a href="mailto:tedxgitamuniversity@gmail.com">tedxgitamuniversity@gmail.com</a></kbd></p>
-                        
-                        
-                        <form id="registration-form" class="registration-form" name="registration-form" method="post" action="response.php" role="form">
-                            <div class="row">
-                                <div class="col-sm-9">
-                                    <div class="form-group">
-                                        <span class="label label-info">Your Name</span>
-                                        <hr>
-                                        <input type="text" id="name" name="name" class="form-control" required="required" placeholder="Name">
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-9">
-                                    <div class="form-group">
-                                        <span class="label label-danger">Enter a Valid ID card Number </span>
-                                        <hr>
-                                        <input type="text" id="id" name="id" class="form-control" required="required" placeholder="Id">
-                                    </div>
-                                </div>
-                                
-                                
-                                <div class="col-sm-9">
-                                    <div class="form-group">
-                                        <span class="label label-warning">Specify Your Email Addresss </span>
-                                        <hr>
-                                        <input type="text" id="email" name="email" class="form-control" required="required" placeholder="Email address">
-                                    </div>
-                                </div>
-                                
-                                <div class="col-sm-9">
-                                    <div class="form-group">
-                                        <span class="label label-success">Type in your Contact Number</span>
-                                        <hr>
-                                        <input type="text" id="number" name="number" class="form-control" required="required" placeholder="Phone No">
-                                    </div>
-                                </div>                                
-
-                                <div class="col-sm-9">
-                                    <div class="form-group">
-                                        <span class="label label-danger">Specify from which College/Institute or Organization you Belong</span>
-                                        <hr>
-                                        <input type="text" id="collorg" name="collorg" class="form-control" required="required" placeholder="College/Organization">
-                                    </div>
-                                </div>
-
+                <form id="registration-form" class="registration-form" name="registration-form" method="post" action="response.php" role="form">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <span class="label label-info">Name</span>
+                                <input type="text" id="name" name="name" class="form-control" required="required" placeholder="Name">
                             </div>
+                        </div>
 
-                            <div class="row">
-                                <div class="col-sm-9">
-                                    <div class="form-group">
-                                        <span class="label label-info">Have you attended a TEDx Conference in the Past? If yes which one?</span>
-                                        <hr>
-                                        <input type="text" id="prev" name="prev" class="form-control" required="required" placeholder="I have / havenot.....">
-                                    </div>
-                                </div>  
-                            </div>     
-
-                            <div class="row">
-                                <div class="col-sm-9">
-                                    <div class="form-group">
-                                        <span class="label label-warning">What is your favorite TED talk?</span>
-                                        <hr>
-                                        <input type="text" id="favtalk" name="favtalk" class="form-control" required="required" placeholder="TED Talk..">
-                                    </div>
-                                </div>  
-                            </div>   
-
-                            <div class="row">
-                                <div class="col-sm-9">
-
-                                    <div class="form-group">
-                                        <input type="submit" name="submit" class="btn btn-success btn-lg">
-                                    </div>
-                                </div>
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <span class="label label-danger">ID card Number </span>
+                                <input type="text" id="id" name="id" class="form-control" required="required" placeholder="Id">
                             </div>
-                        </form>
+                        </div>
+
+
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <span class="label label-warning">Email Addresss</span>
+                                <input type="text" id="email" name="email" class="form-control" required="required" placeholder="Email address">
+                            </div>
+                        </div>
+
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <span class="label label-success">Phone Number</span>
+                                <input type="text" id="number" name="number" class="form-control" required="required" placeholder="Phone No">
+                            </div>
+                        </div>                                
+
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <span class="label label-danger">College/Institute or Organization</span>
+                                <input type="text" id="collorg" name="collorg" class="form-control" required="required" placeholder="College/Organization">
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <span class="label label-info">Have you attended a TEDx Conference in the Past? If yes which one?</span>
+                                <textarea rows="5" id="prev" name="prev" class="form-control" required="required" placeholder="Which one? If you haven't, a no would suffice."></textarea>
+                            </div>
+                        </div>  
+
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <span class="label label-warning">What is your favorite TED talk and why?</span>
+                                <textarea rows="5" id="favtalk" name="favtalk" class="form-control" required="required" placeholder="My favourite TED talk is . . ."></textarea>
+                            </div>
+                        </div>  
+
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <input type="submit" name="submit" class="btn btn-om btn-lg">
+                            </div>
+                        </div>
                     </div>
-
-
-                </div>
+                </form>
             </div>
-        </div>
-    </section>
 
+
+        </div>
+
+
+    </div>
 
 
 
@@ -204,7 +167,7 @@
         </div>
     </div>
 
-    <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>X
+    <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/jquery.isotope.min.js"></script>
     <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>

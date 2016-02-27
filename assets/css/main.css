@@ -525,6 +525,35 @@ padding-bottom: 0px !important;
 .boxrg p {
   color: #000;
 }
-  
 
+#registration-form > span {
+  font-size: 2em;
+}
+  
+.form-control:focus {
+  border-color: #000;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+} 
+
+.btn-om {
+
+    display: inline-block;
+    margin: 0 5px;
+    border-radius: 6px;
+    font-family: "Lato", sans-serif;
+    font-size: 16.5px;
+    padding: 12px 20px;
+    border: 0;
+    background: #555;
+    color: #FFF;
+    cursor: pointer;
+    outline: 0;
+
+}
+.btn-om:hover {
+  background-color: green;
+  color: white;
+
+}
 
