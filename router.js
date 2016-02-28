@@ -11,7 +11,7 @@ var h = require('http'),
     b = require('body-parser');
 
 module.exports.app = function() {
-        var port = process.env.PORT || 5000;
+        var port = process.env.PORT || 8010;
         var app = e();
         var router = e.Router();
         var errorPage = f.readFileSync("404.html", "UTF-8");
