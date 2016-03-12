@@ -58,11 +58,16 @@ module.exports.app = function() {
             res.render('register.ejs');
         });
 
+        router.get('/partners', function (req, res) {
+            res.render('partners.ejs');
+        });
+
         router.post('/controller/attend', function (req, res) {
             var name = req.body['regname'],
                 id   = req.body['regid'],
                 email = req.body['regemail'],
-                phone = req.body['regcollorg'],
+                phone = req.body['regnumber'],
+                org = req.body['regcollorg'],
                 prev = req.body['regprev'],
                 talk = req.body['regfavtalk'];
 
@@ -72,6 +77,21 @@ module.exports.app = function() {
             }
 
             res.render('resregister', {
+                regname: name,
+                regemail: email,
+                regphone: phone
+            });
+
+            em.registration(data);
+        });
+
+        router.post('/controller/contact', function (req, res) {
+            var name = req.body['conname'],
+                email = req.body['conemail'],
+                org = req.body['concollorg'],
+                query = req.body['conmessage'];
+
+            res.render('rescontact', {
                 regname: name,
                 regemail: email,
                 regphone: phone
