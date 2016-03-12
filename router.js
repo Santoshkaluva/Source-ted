@@ -23,49 +23,91 @@ module.exports.app = function() {
         app.use(b.urlencoded({extended: true}));
 
         router.get('/', function (req, res) {
-                res.render('main.ejs');
+            res.render('main.ejs');
         });
 
         router.get('/about', function (req, res) {
-                res.render('about.ejs');
+            res.render('about.ejs');
         });
 
         router.get('/contact', function (req, res) {
-                res.render('contact.ejs');
+            res.render('contact.ejs');
+        });
+
+        router.get('/team', function (req, res) {
+            res.render('team.ejs');
+        });
+
+        router.get('/speakers/:value', function (req, res) {
+            var year = req.params.value;
+            if(year === "2016") {
+                res.render('2016.ejs');
+            }
+            else if(year === "2015") {
+                res.render('2015.ejs');
+            }
+            else if(year === "2014") {
+                res.render('2014.ejs');
+            }
+            else if(year === "2013") {
+                res.render('2013.ejs');
+            }
         });
 
         router.get('/attend', function (req, res) {
-                res.render('register.ejs');
+            res.render('register.ejs');
+        });
+
+        router.post('/controller/attend', function (req, res) {
+            var name = req.body['regname'],
+                id   = req.body['regid'],
+                email = req.body['regemail'],
+                phone = req.body['regcollorg'],
+                prev = req.body['regprev'],
+                talk = req.body['regfavtalk'];
+
+            var data = {
+                to: email,
+                link: "https://in.explara.com/e/tedxgitamuniversity-2016/checkout"
+            }
+
+            res.render('resregister', {
+                regname: name,
+                regemail: email,
+                regphone: phone
+            });
+
+            em.registration(data);
         });
 
         router.get('/[0-9]', function (req, res) {
-                res.redirect(errorPage);
+            res.redirect(errorPage);
         });
 
         router.get('/:value', function(req, res) {
-                var match = 'views/' + req.params.value;
-                f.exists(match, function(present) {
-                        if(present) {
-                                f.readFile(match, function(err, data) {
-                                        if(err) {
-                                                res.send(errorPage.toString(), "UTF-8");
-                                                console.log("GET:" + match + " couldnot be processed");
-                                        }
-                                        else {
-                                                res.end(data, "UTF-8");
-                                        }
-                                });
-                        }
-                        else {
-                                res.end(errorPage.toString(), "UTF-8");
-                                console.log("GET:" + match + " couldnot be processed");
-                        }
-                });
+            var match = 'views/' + req.params.value;
+            f.exists(match, function(present) {
+                    if(present) {
+                            f.readFile(match, function(err, data) {
+                                    if(err) {
+                                            res.send(errorPage.toString(), "UTF-8");
+                                            console.log("GET:" + match + " couldnot be processed");
+                                    }
+                                    else {
+                                            res.end(data, "UTF-8");
+                                    }
+                            });
+                    }
+                    else {
+                            res.end(errorPage.toString(), "UTF-8");
+                            console.log("GET:" + match + " couldnot be processed");
+                    }
+            });
         });
 
         app.use('/', router);
 
         h.createServer(app).listen(port, function() {
-                console.log("Front End Application server started, Open http://localhost:5000");
+            console.log("Front End Application server started, Open http://localhost:5000");
         });
 }
