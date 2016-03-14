@@ -98,7 +98,7 @@ footer {
 }
 
 .xlogo {
-	
+
     display: inline-block;
     vertical-align: middle;
     zoom: 1;
@@ -337,7 +337,7 @@ padding-bottom: 0px !important;
     width: 100%;
     position: relative;
     z-index: 1;
-    margin-bottom: -620px;  
+    margin-bottom: -620px;
 }
 
 #googlemaps {
@@ -349,7 +349,7 @@ padding-bottom: 0px !important;
 
 #map {
     height: 23em;
-    width: 100%;    
+    width: 100%;
 }
 
 .xmap2 {
@@ -438,7 +438,7 @@ padding-bottom: 0px !important;
         -webkit-box-shadow:none;
         -moz-box-shadow:none;
         -o-box-shadow:none;
-       box-shadow: none; 
+       box-shadow: none;
 }
 .box {
     position: relative;
@@ -446,7 +446,7 @@ padding-bottom: 0px !important;
     padding-bottom: 50px;
     padding-left: 30px;
     padding-right: 30px;
-    background-color: black; 
+    background-color: black;
     border-radius: 140px;
     border-bottom: 1px solid #e9e9e9;
     color: #f2f2f2;
@@ -472,6 +472,12 @@ padding-bottom: 0px !important;
 }
 
 /* REGISTER -- hector */
+
+.star {
+  color: red;
+  font-weight: bolder;
+  font-size: 1em;
+}
 
 #main .boxrg a {
     color: #fff;
@@ -499,7 +505,7 @@ padding-bottom: 0px !important;
         -webkit-box-shadow:none;
         -moz-box-shadow:none;
         -o-box-shadow:none;
-       box-shadow: none; 
+       box-shadow: none;
 }
 .boxrg {
     position: relative;
@@ -507,7 +513,7 @@ padding-bottom: 0px !important;
     padding-bottom: 50px;
     padding-left: 30px;
     padding-right: 30px;
-    background-color: #e4e4e4; 
+    background-color: #e4e4e4;
     border-radius: 140px;
     border-bottom: 1px solid #e9e9e9;
 }
@@ -541,12 +547,12 @@ padding-bottom: 0px !important;
 #registration-form > span {
   font-size: 2em;
 }
-  
+
 .form-control:focus {
   border-color: #000;
   box-shadow: none;
   -webkit-box-shadow: none;
-} 
+}
 
 .btn-om {
 
