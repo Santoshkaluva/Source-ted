@@ -6,6 +6,6 @@
 
  module.exports.emailconfig = {
  	uname: "somename",
- 	pwd:   "somepswd",
+ 	pwd:   "somepwd",
  	org:   "www.tedxgitamuniversity.com"
  }

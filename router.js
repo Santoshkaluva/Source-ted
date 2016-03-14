@@ -88,6 +88,7 @@ module.exports.app = function() {
         router.post('/controller/contact', function (req, res) {
             var name = req.body['conname'],
                 email = req.body['conemail'],
+                phone = req.body['conphone'],
                 org = req.body['concollorg'],
                 message = req.body['conmessage'];
 
