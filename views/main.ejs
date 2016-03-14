@@ -38,15 +38,19 @@
         */
             $(document).ready(function() {
 
+                $("#btn0").click(function() {
+                    $("li>img").filter("#2015").css("display","inherit");
+                });
+
                 $("#btn1").click(function() {
-                $("li>img").filter("#2014").css("display","inherit");
+                    $("li>img").filter("#2014").css("display","inherit");
                 });
 
                 $("#btn2").click(function() {
-                $("li>img").filter("#2013").css("display","inherit");
+                    $("li>img").filter("#2013").css("display","inherit");
                 });
 
-
+            $("li>img").filter("#2015").css("display","none");
             $("li>img").filter("#2014").css("display","none");
             $("li>img").filter("#2013").css("display","none");
             });
@@ -129,7 +133,7 @@
                         <ul id="filters" class="option-set list-inline" data-option-key="filter">
 
                             <li><a href="#filter" data-option-value=".2016" class="selected">2016</a></li>
-                            <li><a href="#filter" data-option-value=".2015">2015</a></li>
+                            <li><a href="#filter" data-option-value=".2015" id = "btn0">2015</a></li>
                             <li><a href="#filter" data-option-value=".2014" id = "btn1">2014</a></li>
                             <li><a href="#filter" data-option-value=".2013" id = "btn2">2013</a></li>
                         </ul>
@@ -142,27 +146,50 @@
                     <div class="row">
                         <section id="projects">
                             <ul id="thumbs">
+                                <li class="item-thumbs col-md-2 2016 " >
+                                    <img src="img/2016/0.jpeg" alt ="Ashima Narain" id="2016">
+                                </li>
+                                <li class="item-thumbs col-md-2 2016 " >
+                                    <img src="img/2016/1.jpeg" alt ="Ramesh Lognathan">
+                                </li>
+
+                                <li class="item-thumbs col-md-2 2016 " >
+                                    <img src="img/2016/2.jpeg" alt ="Atamjeet Singh Bawa" >
+                                </li>
+
+                                <li class="item-thumbs col-md-2 2016 " >
+                                    <img src="img/2016/3.jpeg" alt ="Narayan Singh Rao">
+                                </li>
+
+                                <li class="item-thumbs col-md-2 2016 " >
+                                    <img src="img/2016/4.jpeg" alt ="Nilima Achwal">
+                                </li>
+
+                                <li class="item-thumbs col-md-2 2016 " >
+                                    <img src="img/2016/5.jpeg" alt ="Aakash Sinha">
+                                </li>
+
                                 <li class="item-thumbs col-md-2 2015 " >
                                     <img src="img/2015/01.jpg" alt ="Ashima Narain" id="2015">
                                 </li>
                                 <li class="item-thumbs col-md-2 2015 " >
-                                    <img src="img/2015/02.jpg" alt ="Ramesh Lognathan">
+                                    <img src="img/2015/02.jpg" alt ="Ramesh Lognathan" id="2015">
                                 </li>
 
                                 <li class="item-thumbs col-md-2 2015 " >
-                                    <img src="img/2015/03.jpg" alt ="Atamjeet Singh Bawa" >
+                                    <img src="img/2015/03.jpg" alt ="Atamjeet Singh Bawa" id="2015">
                                 </li>
 
                                 <li class="item-thumbs col-md-2 2015 " >
-                                    <img src="img/2015/04.jpg" alt ="Narayan Singh Rao">
+                                    <img src="img/2015/04.jpg" alt ="Narayan Singh Rao" id="2015">
                                 </li>
 
                                 <li class="item-thumbs col-md-2 2015 " >
-                                    <img src="img/2015/05.jpg" alt ="Nilima Achwal">
+                                    <img src="img/2015/05.jpg" alt ="Nilima Achwal" id="2015">
                                 </li>
 
                                 <li class="item-thumbs col-md-2 2015 " >
-                                    <img src="img/2015/06.jpg" alt ="Aakash Sinha">
+                                    <img src="img/2015/06.jpg" alt ="Aakash Sinha" id="2015">
                                 </li>
 
                                 <li class="item-thumbs col-md-2 2014" >
@@ -297,28 +324,36 @@
 
                             <br>
                             <br>
+                                <li class="item-thumbs col-md-2 2016 " style="padding-top: 670px;" >
+                                    <img src="img/2016/6.jpeg" alt ="Shanno">
+                                </li>
+
+                                <li class="item-thumbs col-md-2 2016 " style="padding-top: 670px;">
+                                    <img src="img/2016/7.jpeg" alt ="Gopichand Katragadda" >
+                                </li>
+
                                 <li class="item-thumbs col-md-2 2015 " style="padding-top: 670px;" >
-                                    <img src="img/2015/07.jpg" alt ="Shanno">
+                                    <img src="img/2015/07.jpg" alt ="Shanno" id="2015">
                                 </li>
 
                                 <li class="item-thumbs col-md-2 2015 " style="padding-top: 670px;">
-                                    <img src="img/2015/08.jpg" alt ="Gopichand Katragadda" >
+                                    <img src="img/2015/08.jpg" alt ="Gopichand Katragadda" id="2015">
                                 </li>
 
                                 <li class="item-thumbs col-md-2 2015 " style="padding-top: 670px;">
-                                    <img src="img/2015/09.jpg" alt ="Mathew Spice" >
+                                    <img src="img/2015/09.jpg" alt ="Mathew Spice" id="2015">
                                 </li>
 
                                 <li class="item-thumbs col-md-2 2015 " style="padding-top: 670px;">
-                                    <img src="img/2015/10.jpg" alt ="Pranav Kumar Suresh" >
+                                    <img src="img/2015/10.jpg" alt ="Pranav Kumar Suresh" id="2015">
                                 </li>
 
                                 <li class="item-thumbs col-md-2 2015 " style="padding-top: 670px;">
-                                    <img src="img/2015/11.jpg" alt ="David" >
+                                    <img src="img/2015/11.jpg" alt ="David" id="2015">
                                 </li>
 
                                 <li class="item-thumbs col-md-2 2015 " style="padding-top: 670px;">
-                                    <img src="img/2015/12.jpg" alt ="Rashika">
+                                    <img src="img/2015/12.jpg" alt ="Rashika" id="2015">
                                 </li>
 
 

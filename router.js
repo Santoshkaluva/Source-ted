@@ -38,20 +38,20 @@ module.exports.app = function() {
             res.render('team.ejs');
         });
 
-        router.get('/speakers/:value', function (req, res) {
-            var year = req.params.value;
-            if(year === "2016") {
-                res.render('2016.ejs');
-            }
-            else if(year === "2015") {
-                res.render('2015.ejs');
-            }
-            else if(year === "2014") {
-                res.render('2014.ejs');
-            }
-            else if(year === "2013") {
-                res.render('2013.ejs');
-            }
+        router.get('/2015', function (req, res) {
+            res.render('2016.ejs');
+        });
+
+        router.get('/2015', function (req, res) {
+            res.render('2015.ejs');
+        });
+
+        router.get('/2014', function (req, res) {
+            res.render('2014.ejs');
+        });
+
+        router.get('/2013', function (req, res) {
+            res.render('2013.ejs');
         });
 
         router.get('/attend', function (req, res) {
@@ -82,14 +82,19 @@ module.exports.app = function() {
                 regphone: phone
             });
 
-            em.registration(data);
+            m.registration(data);
         });
 
         router.post('/controller/contact', function (req, res) {
             var name = req.body['conname'],
                 email = req.body['conemail'],
                 org = req.body['concollorg'],
-                query = req.body['conmessage'];
+                message = req.body['conmessage'];
+
+            var data = {
+                from: email,
+                query: message
+            }
 
             res.render('rescontact', {
                 regname: name,
@@ -97,7 +102,7 @@ module.exports.app = function() {
                 regphone: phone
             });
 
-            em.registration(data);
+            m.contact(data);
         });
 
         router.get('/[0-9]', function (req, res) {
@@ -128,6 +133,6 @@ module.exports.app = function() {
         app.use('/', router);
 
         h.createServer(app).listen(port, function() {
-            console.log("Front End Application server started, Open http://localhost:5000");
+            console.log("Front End Application server started, Open http://localhost:" + port);
         });
 }
