@@ -38,7 +38,7 @@ module.exports.app = function() {
             res.render('team.ejs');
         });
 
-        router.get('/2015', function (req, res) {
+        router.get('/2016', function (req, res) {
             res.render('2016.ejs');
         });
 
