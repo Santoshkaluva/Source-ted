@@ -792,3 +792,11 @@ width: -webkit-calc(100% / 2);
 .team-member p {
     margin-top: 0;
 }
+
+
+
+
+.xpartnerimg {
+  display:block;
+  margin-bottom: 2em !important;
+}
